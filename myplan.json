@@ -1,0 +1,136 @@
+{
+  "name": "Rumah Gadang Tinggal Raja -- schematic floor plan",
+  "units": "metres",
+  "note": "y is UP in this file (survey convention). plan.mjs flips it to screen y-down. Traced from Rumah Gadang Tinggal Raja architectural floor plan.",
+  "scale_px_per_m": 40.0,
+  "origin_m": [1.7, 1.8],
+  "polylines": [
+    {
+      "id": "main_outer_wall",
+      "category": "wall",
+      "closed": true,
+      "points": [[1.9, 1.6], [14.7, 1.6], [14.7, 8.4], [1.9, 8.4]]
+    },
+    {
+      "id": "ruang_tengah",
+      "category": "wall",
+      "closed": true,
+      "points": [[4.3, 1.6], [12.1, 1.6], [12.1, 6.2], [4.3, 6.2]]
+    },
+    {
+      "id": "anjuang_atas_kiri",
+      "category": "shrine",
+      "closed": true,
+      "points": [[0.0, 3.7], [1.9, 3.7], [1.9, 6.2], [0.0, 6.2]]
+    },
+    {
+      "id": "anjuang_tengah_kiri",
+      "category": "shrine",
+      "closed": true,
+      "points": [[1.9, 1.6], [4.3, 1.6], [4.3, 6.2], [1.9, 6.2]]
+    },
+    {
+      "id": "anjuang_tengah_kanan",
+      "category": "shrine",
+      "closed": true,
+      "points": [[12.1, 1.6], [14.7, 1.6], [14.7, 6.2], [12.1, 6.2]]
+    },
+    {
+      "id": "anjuang_atas_kanan",
+      "category": "shrine",
+      "closed": true,
+      "points": [[14.7, 3.7], [16.6, 3.7], [16.6, 6.2], [14.7, 6.2]]
+    },
+    {
+      "id": "kamar_tidur_terbuka_kiri",
+      "category": "cella",
+      "closed": true,
+      "points": [[1.9, 6.2], [4.3, 6.2], [4.3, 8.4], [1.9, 8.4]]
+    },
+    {
+      "id": "kamar_tidur_1",
+      "category": "cella",
+      "closed": true,
+      "points": [[4.3, 6.2], [6.8, 6.2], [6.8, 8.4], [4.3, 8.4]]
+    },
+    {
+      "id": "kamar_tidur_2",
+      "category": "cella",
+      "closed": true,
+      "points": [[6.8, 6.2], [9.7, 6.2], [9.7, 8.4], [6.8, 8.4]]
+    },
+    {
+      "id": "kamar_tidur_3",
+      "category": "cella",
+      "closed": true,
+      "points": [[9.7, 6.2], [12.1, 6.2], [12.1, 8.4], [9.7, 8.4]]
+    },
+    {
+      "id": "kamar_tidur_terbuka_kanan",
+      "category": "cella",
+      "closed": true,
+      "points": [[12.1, 6.2], [14.7, 6.2], [14.7, 8.4], [12.1, 8.4]]
+    },
+    {
+      "id": "entrance_stair",
+      "category": "stair",
+      "closed": true,
+      "points": [[7.65, 0.0], [8.85, 0.0], [8.85, 1.6], [7.65, 1.6]]
+    },
+    {
+      "id": "stair_tread_1",
+      "category": "stair",
+      "closed": false,
+      "points": [[7.65, 0.3], [8.85, 0.3]]
+    },
+    {
+      "id": "stair_tread_2",
+      "category": "stair",
+      "closed": false,
+      "points": [[7.65, 0.6], [8.85, 0.6]]
+    },
+    {
+      "id": "stair_tread_3",
+      "category": "stair",
+      "closed": false,
+      "points": [[7.65, 0.9], [8.85, 0.9]]
+    },
+    {
+      "id": "stair_tread_4",
+      "category": "stair",
+      "closed": false,
+      "points": [[7.65, 1.2], [8.85, 1.2]]
+    },
+    {
+      "id": "axis_ns",
+      "category": "axis",
+      "closed": false,
+      "points": [[8.25, 0.0], [8.25, 8.4]]
+    },
+    {
+      "id": "axis_ew",
+      "category": "axis",
+      "closed": false,
+      "points": [[0.0, 4.95], [16.6, 4.95]]
+    }
+  ],
+  "silhouette": {
+    "id": "footprint",
+    "category": "wall",
+    "points": [
+      [8.25, 1.6],
+      [14.7, 1.6],
+      [14.7, 3.7],
+      [16.6, 3.7],
+      [16.6, 6.2],
+      [14.7, 6.2],
+      [14.7, 8.4],
+      [1.9, 8.4],
+      [1.9, 6.2],
+      [0.0, 6.2],
+      [0.0, 3.7],
+      [1.9, 3.7],
+      [1.9, 1.6]
+    ]
+  }
+}
