@@ -1,0 +1,19 @@
+{
+  "name": "grk-module2",
+  "version": "1.0.0",
+  "description": "Computer Graphics Practicum -- Module 2: Rendering Pipeline & 2D Primitives (from-scratch rasteriser + Three.js viewer)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node tests.mjs",
+    "plan": "node draw_plan.mjs --w 800 --h 600",
+    "square": "node draw_square.mjs --mode fill",
+    "bug": "node triangle_gap_bug.mjs",
+    "bench": "node bench.mjs",
+    "serve": "npx --yes serve web"
+  },
+  "devDependencies": {
+    "serve": ">=14.0.0",
+    "three": "^0.160.0"
+  }
+}

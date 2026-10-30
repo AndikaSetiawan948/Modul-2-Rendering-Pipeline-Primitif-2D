@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pusaka3D &mdash; Modul 2: Denah Rumah Gadang Tinggal Raja (Three.js)</title>
+<link rel="stylesheet" href="cvd.css" />
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; font: 14px/1.5 system-ui, sans-serif; background: #12121a; color: #e8e8ef; }
+  header { padding: .6rem 1rem; background: #1c1c28; border-bottom: 1px solid #333; }
+  header h1 { font-size: 1rem; margin: 0; }
+  header p { margin: .25rem 0 0; font-size: .8rem; color: #a8a8b8; }
+  #wrap { display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem; }
+  #view { position: relative; }
+  canvas { border: 1px solid #333; background: #12121e; display: block; }
+  #legend { min-width: 240px; }
+  #legend h2 { font-size: .9rem; margin: 0 0 .5rem; }
+  .row { display: flex; align-items: center; gap: .5rem; margin: .3rem 0; }
+  .swatch { width: 20px; height: 20px; border: 1px solid #0006; flex: 0 0 auto; }
+  .marker { width: 16px; text-align: center; font-weight: 700; }
+  label.toggle { display: flex; gap: .4rem; align-items: center; margin-top: .8rem; font-size: .85rem; }
+  .hint { font-size: .75rem; color: #999; margin-top: .6rem; max-width: 260px; }
+  button { font: inherit; padding: .3rem .6rem; margin-top: .6rem; cursor: pointer; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="deuteranopia">
+    <feColorMatrix type="matrix" values="
+      0.625 0.375 0 0 0
+      0.700 0.300 0 0 0
+      0.000 0.300 0.700 0 0
+      0 0 0 1 0" />
+  </filter>
+  <filter id="protanopia">
+    <feColorMatrix type="matrix" values="
+      0.567 0.433 0 0 0
+      0.558 0.442 0 0 0
+      0.000 0.242 0.758 0 0
+      0 0 0 1 0" />
+  </filter>
+</svg>
+</head>
+<body>
+<header>
+  <h1>Pusaka3D &mdash; Denah Rumah Gadang Tinggal Raja, Three.js (Modul 2)</h1>
+  <p>Menggambar <code>myplan.json</code> yang sama dengan <code>raster.mjs</code>.
+     Outline = <code>THREE.Line</code>, siluet = <code>ShapeGeometry</code>.
+     Bandingkan hasil <code>Export PPM</code> terhadap <code>out/plan_scratch.ppm</code> dengan <code>node compare.mjs</code>.</p>
+</header>
+<div id="wrap">
+  <div id="view">
+    <canvas id="c" width="800" height="600"></canvas>
+  </div>
+  <div id="legend">
+    <h2>Legenda Aksesibel</h2>
+    <div id="rows"></div>
+    <label class="toggle"><input type="checkbox" id="cvd" /> Simulate deuteranopia</label>
+    <label class="toggle"><input type="checkbox" id="cvd2" /> Simulate protanopia</label>
+    <label class="toggle"><input type="checkbox" id="fill" checked /> Fill silhouette</label>
+    <button id="export">Export PPM</button>
+    <p class="hint">Legenda menggunakan palet <b>viridis</b> (luminansi bervariasi),
+      <b>label teks</b>, dan <b>bentuk marker</b> berbeda per kategori &mdash; sehingga kelima
+      kategori tetap terbedakan pada simulasi CVD maupun grayscale.</p>
+  </div>
+</div>
+<script type="module" src="viewer.mjs"></script>
+</body>
+</html>
