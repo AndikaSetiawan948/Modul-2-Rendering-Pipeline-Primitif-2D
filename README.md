@@ -14,6 +14,18 @@ pixel `(x,y)` is a point sample at `(x+0.5, y+0.5)`; triangle vertices are
 passed so the total `edge(A,B,C) > 0`; "inside" = all three edge functions
 `>= 0`, and the top-left rule decides the exactly-on-edge case.
 
+# Praktikum Grafika Komputer — Modul 2: Rendering Pipeline & Primitif 2D
+**Subjek Warisan Budaya:** Rumah Gadang Tinggal Raja (`myplan.json`)
+
+Implementasi *from-scratch* 2D software rasteriser dalam JavaScript murni (DDA, Bresenham 8-oktan, *edge-function triangle rasterisation* dengan *top-left fill rule*, konvensi *sample-centre* $(x+0.5, y+0.5)$, dan *barycentric interpolation*) yang dibandingkan piksel-demi-piksel terhadap WebGL / Three.js viewer dengan legenda aksesibel (*viridis* 5-step ramp + *CVD simulation filters*).
+
+## 🌐 Live Demo (GitHub Pages) & Simulasi Lokal
+- **Live URL (GitHub Pages):** [https://AndikaSetiawan948.github.io/Modul-2-Rendering-Pipeline-Primitif-2D/web/](https://AndikaSetiawan948.github.io/Modul-2-Rendering-Pipeline-Primitif-2D/web/)
+- **Menjalankan Simulasi Lokal (`npx serve`):**
+  ```bash
+  npx serve .
+  # Lalu buka di browser: http://localhost:3000/web/
+
 ## Quick start
 
 ```bash
